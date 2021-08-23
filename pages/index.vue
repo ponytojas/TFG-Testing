@@ -30,17 +30,19 @@
       </p>
 
       <button
-        class="
-          bg-blue-400
-          hover:bg-blue-600
-          px-4
-          py-1
-          text-white
-          rounded-2xl
-          cursor-pointer
-        "
+        :class="[
+          this.option == 'A'
+            ? ['bg-blue-400', 'hover:bg-blue-600', 'text-white']
+            : 'text-blue-400',
+        ]"
+        class="px-4 py-1 rounded-2xl cursor-pointer"
         @click="show = true"
       >
+        <LockOpenOutline-icon
+          :class="this.option == 'B' ? 'to-hide' : ''"
+          class="text-white"
+        />
+
         Login
       </button>
     </div>
@@ -304,15 +306,15 @@
                   focus:outline-none
                   bg-pink-200
                   hover:bg-pink-500
-                  text-white
-                  text-blue-grey-darker
+                  text-white text-blue-grey-darker
                   font-semibold
                   px-6
                   py-3
                   sm:py-4
                 "
-                >Buy Now</button
               >
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
@@ -383,7 +385,7 @@ import Tick from "../components/Tick.vue";
 export default {
   components: { Modal, Tick },
   data: () => ({
-    show: false,
+    option: "",
   }),
   methods: {
     confirm() {
@@ -395,6 +397,9 @@ export default {
       close();
     },
   },
+  mounted() {
+    this.option = this.$store.state.option;
+  },
 };
 </script>
 
@@ -402,5 +407,9 @@ export default {
 .bg-grey-lighter {
   --tw-bg-opacity: 1 !important;
   background-color: rgba(243, 247, 249, var(--tw-bg-opacity)) !important;
+}
+
+.to-hide {
+  display: none !important;
 }
 </style>
