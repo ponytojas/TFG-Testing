@@ -26,7 +26,8 @@ export default {
 
   plugins: [
     "~plugins/vue-final-modal.js",
-    { src: "@/plugins/vue-material-icons", mode: "client" }
+    { src: "@/plugins/vue-material-icons", mode: "client" },
+    { src: '~/plugins/vue2-smooth-scroll', ssr: false }
   ],
 
   components: true,
@@ -47,7 +48,7 @@ export default {
   ],
 
   build: {
-    transpile: ["vue-final-modal"]
+    transpile: ["vue-final-modal", "vue2-smooth-scroll"]
   },
   env: {
     USERNAME: process.env.USERNAME,

@@ -24,13 +24,13 @@
     >
       <img class="h-12 w-12 my-auto ml-6" src="/images/logo.png" />
       <p class="text-xl text-gray-800 font-light cursor-pointer">
-        <a href="#home">Home</a>
+        <a href="#home" v-smooth-scroll>Home</a>
       </p>
       <p class="text-xl text-gray-800 font-light cursor-pointer">
-        <a href="#pricing">Pricing</a>
+        <a href="#pricing" v-smooth-scroll>Pricing</a>
       </p>
       <p class="text-xl text-gray-800 font-light cursor-pointer">
-        <a href="#about">About</a>
+        <a href="#about" v-smooth-scroll>About</a>
       </p>
 
       <button
@@ -64,7 +64,7 @@
           h-auto
           z-10
           rounded-lg
-          shadow-lg
+          shadow-2xl
           mt-64
           flex flex-row
           justify-around
