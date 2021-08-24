@@ -6,23 +6,43 @@
     content-class="relative flex flex-col w-1/5 max-h-full rounded-2xl bg-white mx-4 px-6 py-10 shadow-2xl"
     v-on="$listeners"
     :transition="{
-        'enter-active-class': 'transition duration-200 ease-in-out transform',
-        'enter-class': 'translate-y-full',
-        'enter-to-class': 'translate-y-0',
-        'leave-active-class': 'transition duration-200 ease-in-out transform',
-        'leave-to-class': 'translate-y-full',
-        'leave-class': 'translate-y-0'
-      }"
+      'enter-active-class': 'transition duration-200 ease-in-out transform',
+      'enter-class': 'translate-y-full',
+      'enter-to-class': 'translate-y-0',
+      'leave-active-class': 'transition duration-200 ease-in-out transform',
+      'leave-to-class': 'translate-y-full',
+      'leave-class': 'translate-y-0',
+    }"
   >
-    <span class="mr-8 text-2xl text-gray-800 font-bold ">
+    <span class="mr-8 text-2xl text-gray-800 font-bold">
       <slot name="title"></slot>
     </span>
     <div class="flex-grow overflow-y-auto">
       <slot v-bind:params="params"></slot>
     </div>
     <div class="flex-shrink-0 flex justify-around items-center pt-4">
-      <v-button class="cursor-pointer bg-green px-4 py-2 text-white bg-green-400 rounded" @click="$emit('confirm', close)">confirm</v-button>
-      <v-button class="cursor-pointer text-red-500" @click="$emit('cancel', close)">cancel</v-button>
+      <button
+        :class="[
+          option == 'B'
+            ? 'text-green-500'
+            : 'px-4 py-2 text-white bg-green-400 rounded',
+        ]"
+        class="cursor-pointer"
+        @click="$emit('confirm', close)"
+      >
+        Confirm
+      </button>
+      <button
+        :class="[
+          option == 'B'
+            ? 'bg-red-400 hover:bg-red-700 text-white px-4 py-2 rounded'
+            : 'text-red-500',
+        ]"
+        class="cursor-pointer"
+        @click="$emit('cancel', close)"
+      >
+        Cancel
+      </button>
     </div>
   </vue-final-modal>
 </template>
@@ -31,5 +51,11 @@
 export default {
   name: "CustomModal",
   inheritAttrs: false,
+  props: {
+    option: {
+      type: String,
+      default: "C",
+    },
+  },
 };
 </script>

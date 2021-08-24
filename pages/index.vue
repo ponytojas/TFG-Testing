@@ -329,7 +329,7 @@
     </div>
       <Grid></Grid>
     </div>
-    <Modal v-model="show" @confirm="confirm" @cancel="cancel">
+    <Modal v-model="show" @confirm="confirm" @cancel="cancel" :option="this.option">
       <template v-slot:title class="text-white">Login to your account</template>
       <div class="mb-4">
         <label
@@ -396,6 +396,7 @@ export default {
   components: { Modal, Tick, Grid },
   data: () => ({
     option: "",
+    show: false,
   }),
   methods: {
     confirm() {
