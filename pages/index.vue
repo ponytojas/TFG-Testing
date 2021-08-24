@@ -210,26 +210,30 @@
               </li>
             </ul>
             <div class="text-center mt-12">
-              <button
-                class="
-                  block
-                  w-full
-                  text-xl
-                  sm:text-2xl
-                  bg-none
-                  rounded-lg
-                  focus:outline-none
-                  bg-green-300
-                  hover:bg-green-500
-                  text-white
-                  font-semibold
-                  px-6
-                  py-4
-                  sm:py-5
-                "
+              <nuxt-link
+                :to="{ name: 'checkout', params: { price: '$149 USD', option: this.option } }"
               >
-                Buy 1 license now!
-              </button>
+                <button
+                  class="
+                    block
+                    w-full
+                    text-xl
+                    sm:text-2xl
+                    bg-none
+                    rounded-lg
+                    focus:outline-none
+                    bg-green-300
+                    hover:bg-green-500
+                    text-white
+                    font-semibold
+                    px-6
+                    py-4
+                    sm:py-5
+                  "
+                >
+                  Buy 1 license now!
+                </button>
+              </nuxt-link>
             </div>
           </div>
         </div>
@@ -302,26 +306,30 @@
               </li>
             </ul>
             <div class="text-center mt-12">
-              <button
-                class="
-                  w-full
-                  text-lg
-                  sm:text-xl
-                  block
-                  bg-none
-                  rounded-lg
-                  focus:outline-none
-                  bg-pink-200
-                  hover:bg-pink-500
-                  text-white text-blue-grey-darker
-                  font-semibold
-                  px-6
-                  py-3
-                  sm:py-4
-                "
+              <nuxt-link
+                :to="{ name: 'checkout', params: { price: '$99 USD', option: this.option } }"
               >
-                Buy Now
-              </button>
+                <button
+                  class="
+                    w-full
+                    text-lg
+                    sm:text-xl
+                    block
+                    bg-none
+                    rounded-lg
+                    focus:outline-none
+                    bg-pink-200
+                    hover:bg-pink-500
+                    text-white text-blue-grey-darker
+                    font-semibold
+                    px-6
+                    py-3
+                    sm:py-4
+                  "
+                >
+                  Buy Now
+                </button>
+              </nuxt-link>
             </div>
           </div>
         </div>
