@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center items-center">
     <div class="absolute pb-64 top-0">
-      <nuxt-img
+      <img
         class="w-screen max-h-screen"
         src="/images/banner-min.jpg"
         sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
