@@ -338,6 +338,7 @@
       @confirm="confirm"
       @cancel="cancel"
       :option="this.option"
+      :fail="this.fail"
     >
       <template v-slot:title class="text-white">Login to your account</template>
       <div class="mb-4">
@@ -364,6 +365,7 @@
           id="username"
           type="text"
           placeholder="Username"
+          v-model="user"
         />
       </div>
       <div class="mb-6">
@@ -389,6 +391,7 @@
           "
           id="password"
           type="password"
+          v-model="pass"
           placeholder="🤫  sssshhh....."
         />
       </div>
@@ -406,11 +409,20 @@ export default {
   data: () => ({
     option: "",
     show: false,
+    user: "",
+    pass: "",
+    fail: false,
   }),
   methods: {
     confirm() {
-      // some code...
-      this.show = false;
+      console.log(this.user);
+      console.log(this.pass);
+      console.log(process.env.USER);
+      console.log(process.env.PASS);
+
+      this.user === process.env.USERNAME && this.pass === process.env.PASS
+        ? this.$router.push("admin")
+        : (this.fail = true);
     },
     cancel(close) {
       // some code...

@@ -32,7 +32,6 @@ export default {
   components: true,
 
   buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
     "@nuxt/image"
   ],
@@ -49,5 +48,9 @@ export default {
 
   build: {
     transpile: ["vue-final-modal"]
+  },
+  env: {
+    USERNAME: process.env.USERNAME,
+    PASS: process.env.PASS
   }
 };

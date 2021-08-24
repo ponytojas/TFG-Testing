@@ -2,6 +2,8 @@
   <vue-final-modal
     v-slot="{ params, close }"
     v-bind="$attrs"
+    :click-to-close="false"
+    :esc-to-close="true"
     classes="flex justify-center items-center mt-10 rounded"
     content-class="relative flex flex-col w-1/5 max-h-full rounded-2xl bg-white mx-4 px-6 py-10 shadow-2xl"
     v-on="$listeners"
@@ -17,6 +19,9 @@
     <span class="mr-8 text-2xl text-gray-800 font-bold">
       <slot name="title"></slot>
     </span>
+    <p class="mt-4 text-red-500 text-center" :class="fail ? '': 'hidden'">
+      The username or password is not correct
+    </p>
     <div class="flex-grow overflow-y-auto">
       <slot v-bind:params="params"></slot>
     </div>
@@ -25,7 +30,7 @@
         :class="[
           option == 'B'
             ? 'text-green-500'
-            : 'px-4 py-2 text-white bg-green-400 rounded',
+            : 'px-4 py-2 text-white bg-green-400 rounded order-last',
         ]"
         class="cursor-pointer"
         @click="$emit('confirm', close)"
@@ -56,6 +61,7 @@ export default {
       type: String,
       default: "C",
     },
+    fail: Boolean,
   },
 };
 </script>
