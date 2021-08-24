@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center items-center">
     <div class="absolute pb-64 top-0">
-      <img class="w-screen" style="height: 780px" src="/images/banner.jpg" />
+      <img class="w-screen" style="height: 780px" src="/images/banner-min.jpg" />
     </div>
     <div
       class="
@@ -94,6 +94,9 @@
           </p>
         </div>
       </div>
+    </div>
+     <div class="w-full">
+      <p class="text-8xl text-center font-thin mt-32">Pricing</p>
     </div>
     <div
       class="
@@ -320,6 +323,12 @@
         </div>
       </div>
     </div>
+    <div id="about" class="w-6/12 mx-auto">
+    <div class="w-full">
+      <p class="text-8xl text-center font-thin mt-32">About us</p>
+    </div>
+      <Grid></Grid>
+    </div>
     <Modal v-model="show" @confirm="confirm" @cancel="cancel">
       <template v-slot:title class="text-white">Login to your account</template>
       <div class="mb-4">
@@ -381,9 +390,10 @@
 <script>
 import Modal from "../components/Modal.vue";
 import Tick from "../components/Tick.vue";
+import Grid from "../components/ImagesGrid.vue";
 
 export default {
-  components: { Modal, Tick },
+  components: { Modal, Tick, Grid },
   data: () => ({
     option: "",
   }),

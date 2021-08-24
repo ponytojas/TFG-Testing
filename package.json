@@ -16,6 +16,7 @@
     "vue-material-design-icons": "^4.12.1"
   },
   "devDependencies": {
+    "@nuxt/image": "^0.5.0",
     "@nuxtjs/tailwindcss": "^4.2.0",
     "postcss": "^8.3.5"
   }
