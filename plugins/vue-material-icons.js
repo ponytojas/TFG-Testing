@@ -4,6 +4,8 @@ import RocketLaunchOutline from "vue-material-design-icons/RocketLaunchOutline.v
 import ApacheKafka from "vue-material-design-icons/ApacheKafka.vue";
 import LightbulbOutline from "vue-material-design-icons/LightbulbOutline.vue";
 import LockOpenOutline from "vue-material-design-icons/LockOpenOutline.vue";
+import Menu from "vue-material-design-icons/Menu.vue";
+
 
 
 export default function materialIcons() {
@@ -11,5 +13,5 @@ export default function materialIcons() {
   Vue.component("ApacheKafka-icon", ApacheKafka);
   Vue.component("LightbulbOutline-icon", LightbulbOutline);
   Vue.component("LockOpenOutline-icon", LockOpenOutline);
-
+  Vue.component("Menu-icon", LockOpenOutline);
 }

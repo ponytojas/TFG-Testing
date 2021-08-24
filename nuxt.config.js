@@ -27,7 +27,7 @@ export default {
   plugins: [
     "~plugins/vue-final-modal.js",
     { src: "@/plugins/vue-material-icons", mode: "client" },
-    { src: '~/plugins/vue2-smooth-scroll', ssr: false }
+    { src: '~/plugins/vue2-smooth-scroll', ssr: false },
   ],
 
   components: true,
