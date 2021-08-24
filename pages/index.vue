@@ -1,7 +1,11 @@
 <template>
   <div class="flex flex-col justify-center items-center">
     <div class="absolute pb-64 top-0">
-      <img class="w-screen" style="height: 780px" src="/images/banner-min.jpg" />
+      <img
+        class="w-screen max-h-screen"
+        src="/images/banner-min.jpg"
+        sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+      />
     </div>
     <div
       class="
@@ -61,7 +65,7 @@
           z-10
           rounded-lg
           shadow-lg
-          mt-20
+          mt-64
           flex flex-row
           justify-around
         "
@@ -95,7 +99,7 @@
         </div>
       </div>
     </div>
-     <div class="w-full">
+    <div class="w-full">
       <p class="text-8xl text-center font-thin mt-32">Pricing</p>
     </div>
     <div
@@ -324,12 +328,17 @@
       </div>
     </div>
     <div id="about" class="w-6/12 mx-auto">
-    <div class="w-full">
-      <p class="text-8xl text-center font-thin mt-32">About us</p>
-    </div>
+      <div class="w-full">
+        <p class="text-8xl text-center font-thin mt-32">About us</p>
+      </div>
       <Grid></Grid>
     </div>
-    <Modal v-model="show" @confirm="confirm" @cancel="cancel" :option="this.option">
+    <Modal
+      v-model="show"
+      @confirm="confirm"
+      @cancel="cancel"
+      :option="this.option"
+    >
       <template v-slot:title class="text-white">Login to your account</template>
       <div class="mb-4">
         <label
