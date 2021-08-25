@@ -4,7 +4,9 @@ import RocketLaunchOutline from "vue-material-design-icons/RocketLaunchOutline.v
 import ApacheKafka from "vue-material-design-icons/ApacheKafka.vue";
 import LightbulbOutline from "vue-material-design-icons/LightbulbOutline.vue";
 import LockOpenOutline from "vue-material-design-icons/LockOpenOutline.vue";
-import Menu from "vue-material-design-icons/Menu.vue";
+import CogOutline from "vue-material-design-icons/CogOutline.vue";
+import Delete from "vue-material-design-icons/Delete.vue";
+import Pencil from "vue-material-design-icons/Pencil.vue";
 
 
 
@@ -13,5 +15,7 @@ export default function materialIcons() {
   Vue.component("ApacheKafka-icon", ApacheKafka);
   Vue.component("LightbulbOutline-icon", LightbulbOutline);
   Vue.component("LockOpenOutline-icon", LockOpenOutline);
-  Vue.component("Menu-icon", LockOpenOutline);
+  Vue.component("CogOutline-icon", CogOutline);
+  Vue.component("Delete-icon", Delete);
+  Vue.component("Pencil-icon", Pencil);
 }
