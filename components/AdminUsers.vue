@@ -52,7 +52,8 @@
       </div>
       <div class="flex flex-row justify-center items-center mt-4">
         <button
-          class="bg-blue-400 px-4 py-2 text-white rounded-lg"
+        :class="[option === 'A' ? 'bg-blue-400 text-white hover:bg-blue-700' : 'text-blue-500']"
+          class=" px-4 py-2 rounded-lg"
           @click="add()"
         >
           Add new user
@@ -217,10 +218,13 @@ export default {
   components: { Modal },
   data: () => ({
     users: data.users,
+    stocks: data.stocks,
     show: false,
     editing: false,
     index: -1,
     userToEdit: "",
+    option: "",
+    fail: false
   }),
   methods: {
     edit(index) {
@@ -252,6 +256,9 @@ export default {
     cancel(close) {
       close();
     },
+  },
+  mounted() {
+    this.option = this.$store.state.option;
   },
 };
 </script>

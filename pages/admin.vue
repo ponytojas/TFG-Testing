@@ -11,15 +11,10 @@ import AdminHome from "../components/AdminHome.vue";
 import AdminUsers from "../components/AdminUsers.vue";
 import AdminStock from "../components/AdminStock.vue";
 
-import data from "../static/data.json";
-
 export default {
   layout: "admin",
   components: { AdminHome, AdminUsers, AdminStock },
-  data: () => ({
-    users: data.users,
-    stock: data.stock,
-  }),
+  data: () => ({}),
   computed: {
     adminSelection() {
       return this.$store.state.selection === "HOME"
