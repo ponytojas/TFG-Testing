@@ -423,11 +423,6 @@ export default {
   }),
   methods: {
     confirm() {
-      console.log(this.user);
-      console.log(this.pass);
-      console.log(process.env.USER);
-      console.log(process.env.PASS);
-
       this.user === process.env.USERNAME && this.pass === process.env.PASS
         ? this.$router.push("admin")
         : (this.fail = true);
