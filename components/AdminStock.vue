@@ -36,7 +36,7 @@
                 <Pencil-icon
                   class="hover:text-yellow-500 cursor-pointer text-2xl pl-2"
                   @click="edit(index)"
-                ></Pencil-icon> 
+                ></Pencil-icon>
                 <Delete-icon
                   class="hover:text-red-500 cursor-pointer text-2xl pl-2"
                   @click="remove(index)"
@@ -48,8 +48,12 @@
       </div>
       <div class="flex flex-row justify-center items-center mt-4">
         <button
-          :class="[option === 'A' ? 'bg-blue-400 text-white hover:bg-blue-700' : 'text-blue-500 txt-sm']"
-          class=" px-4 py-2 rounded-lg"
+          :class="[
+            option === 'A'
+              ? 'bg-blue-400 text-white hover:bg-blue-700'
+              : 'text-blue-500 txt-sm',
+          ]"
+          class="px-4 py-2 rounded-lg"
           @click="add()"
         >
           Add new item
@@ -62,9 +66,9 @@
         :option="this.option"
         :fail="this.fail"
       >
-        <template v-slot:title class="text-white"
-          >Login to your account</template
-        >
+        <template v-slot:title class="text-white">
+          {{ index === -1 ? "Adding a new item" : "Editing item" }}
+        </template>
         <div class="mb-4">
           <label
             class="block text-gray-700 font-light mt-5 text-sm mb-2"
@@ -191,7 +195,7 @@ export default {
     index: -1,
     stockToEdit: "",
     option: "",
-    fail: false
+    fail: false,
   }),
   methods: {
     edit(index) {

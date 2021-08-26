@@ -115,9 +115,9 @@
       id="pricing"
     >
       <div
+      :class="this.option == 'A' ? 'shadow-xl' : 'shadow'"
         class="
           bg-white
-          shadow-xl
           rounded-lg
           max-w-2xl
           mx-auto
@@ -233,7 +233,7 @@
                     font-semibold
                   "
                 >
-                  Buy 1 license now!
+                  {{ this.option == 'A' ? 'Buy 1 license now!' : 'This is for me' }}
                 </button>
               </nuxt-link>
             </div>
@@ -241,9 +241,9 @@
         </div>
       </div>
       <div
+      :class="this.option == 'A' ? 'shadow' : 'border mr-2'"
         class="
           bg-white
-          shadow
           rounded-lg
           mt-16
           max-w-xl
@@ -330,7 +330,7 @@
                     font-semibold
                   "
                 >
-                  Buy Now
+                  {{ this.option == 'A' ? 'Buy now!' : 'This is ok' }}
                 </button>
               </nuxt-link>
             </div>

@@ -191,7 +191,7 @@
 
             <button
               :class="[
-                $route.params.option == 'A'
+                this.option == 'A'
                   ? 'bg-blue-400 hover:bg-blue-700 text-white'
                   : 'text-blue-500',
               ]"

@@ -62,6 +62,14 @@ export default {
       default: "C",
     },
     fail: Boolean,
+    index: {
+      type: Number,
+      default: -1,
+    },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    }
   },
 };
 </script>

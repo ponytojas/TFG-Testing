@@ -52,8 +52,12 @@
       </div>
       <div class="flex flex-row justify-center items-center mt-4">
         <button
-        :class="[option === 'A' ? 'bg-blue-400 text-white hover:bg-blue-700' : 'text-blue-500 text-sm']"
-          class=" px-4 py-2 rounded-lg"
+          :class="[
+            option === 'A'
+              ? 'bg-blue-400 text-white hover:bg-blue-700'
+              : 'text-blue-500 text-sm',
+          ]"
+          class="px-4 py-2 rounded-lg"
           @click="add()"
         >
           Add new user
@@ -65,10 +69,11 @@
         @cancel="cancel"
         :option="this.option"
         :fail="this.fail"
+        :index="this.index"
       >
-        <template v-slot:title class="text-white"
-          >Login to your account</template
-        >
+        <template v-if="this.index" v-slot:title class="text-white">
+          {{ index === -1 ? "Adding a new user" : "Editing user" }}
+        </template>
         <div class="mb-4">
           <label
             class="block text-gray-700 font-light mt-5 text-sm mb-2"
@@ -216,16 +221,18 @@ import Modal from "../components/Modal.vue";
 
 export default {
   components: { Modal },
-  data: () => ({
-    users: data.users,
-    stocks: data.stocks,
-    show: false,
-    editing: false,
-    index: -1,
-    userToEdit: "",
-    option: "",
-    fail: false
-  }),
+  data() {
+    return {
+      users: data.users,
+      stocks: data.stocks,
+      show: false,
+      editing: false,
+      index: -1,
+      userToEdit: "",
+      option: "",
+      fail: false,
+    };
+  },
   methods: {
     edit(index) {
       this.index = index;
@@ -246,16 +253,19 @@ export default {
       this.users.splice(index, 1);
     },
     confirm() {
-      if (this.index === -1) {
-        this.users.push(this.userToEdit);
-      } else {
-        this.users[this.index] = { ...this.userToEdit };
-      }
+      this.index === -1
+        ? this.users.push(this.userToEdit)
+        : (this.users[this.index] = { ...this.userToEdit });
+      this.index = -1;
       this.show = false;
     },
     cancel(close) {
+      this.index = -1;
       close();
     },
+  },
+  beforeMount() {
+    this.index = -1;
   },
   mounted() {
     this.option = this.$store.state.option;
