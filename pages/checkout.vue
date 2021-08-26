@@ -1,6 +1,17 @@
 <template>
-  <div class="w-screen h-screen flex flex-col justify-center items-center bg-gray-100">
-    <div class="w-10/12 h-4/6 border shadow-xl rounded-lg flex flex-row bg-white">
+  <div
+    class="
+      w-screen
+      h-screen
+      flex flex-col
+      justify-center
+      items-center
+      bg-gray-100
+    "
+  >
+    <div
+      class="w-10/12 h-4/6 border shadow-xl rounded-lg flex flex-row bg-white"
+    >
       <div
         class="
           flex flex-col
@@ -34,7 +45,8 @@
         <div class="flex flex-col h-full justify-evenly items-center">
           <div class="mb-4 h-4/6 my-40">
             <label
-              class="text-gray-700 font-light mt-5 text-sm mb-2"
+              :class="[this.option == 'A' ? 'text-md' : 'text-sm']"
+              class="text-gray-700 font-light mt-5 mb-2 ml-1"
               for="Name and surname"
             >
               Name and surname
@@ -58,8 +70,9 @@
               placeholder="Name and surname"
               value="Test test"
             />
-                        <label
-              class="text-gray-700 font-light mt-5 text-sm mb-2"
+            <label
+              :class="[this.option == 'A' ? 'text-md' : 'text-sm']"
+              class="text-gray-700 font-light mt-5 mb-2 ml-1"
               for="Name and surname"
             >
               Email
@@ -83,8 +96,9 @@
               placeholder="Email"
               value="user@test.com"
             />
-                        <label
-              class="text-gray-700 font-light mt-5 text-sm mb-2"
+            <label
+              :class="[this.option == 'A' ? 'text-md' : 'text-sm']"
+              class="text-gray-700 font-light mt-5 mb-2 ml-1"
               for="Password"
             >
               Password
@@ -109,9 +123,11 @@
               value="******"
             />
             <label
-              class="text-gray-700 font-light mt-5 text-sm mb-2"
+              :class="[this.option == 'A' ? 'text-md' : 'text-sm']"
+              class="text-gray-700 font-light mt-5 mb-2 ml-1"
               for="credit card"
             >
+              <CreditCardMultipleOutline-icon></CreditCardMultipleOutline-icon>
               Card number
             </label>
             <input
@@ -134,7 +150,8 @@
               value="4XYZ XY0Z X0YZ XYZ8"
             />
             <label
-              class="text-gray-700 font-light mt-5 text-sm mb-2 mr-4"
+              :class="[this.option == 'A' ? 'text-md' : 'text-sm']"
+              class="text-gray-700 font-light mt-5 mb-2 mr-4"
               for="CVV"
             >
               CVV
@@ -159,9 +176,26 @@
             />
           </div>
           <div class="h-2/6">
+            <NuxtLink class="mr-6" to="./">
+              <button
+                :class="[
+                  this.option == 'A'
+                    ? 'bg-red-200  hover:bg-red-500 text-black hover:text-white'
+                    : 'bg-blue-300 hover:bg-blue-500 text-white',
+                ]"
+                class="px-4 py-2 rounded-3xl"
+              >
+                Go back
+              </button>
+            </NuxtLink>
+
             <button
-            :class="[$route.params.option == 'A' ? 'bg-blue-400 hover:bg-blue-700 text-white' : 'text-blue-500']"
-              class="px-4 py-2  rounded-3xl"
+              :class="[
+                $route.params.option == 'A'
+                  ? 'bg-blue-400 hover:bg-blue-700 text-white'
+                  : 'text-blue-500',
+              ]"
+              class="px-4 py-2 rounded-3xl"
               @click="process()"
             >
               <span v-if="!processing">Process payment</span>
@@ -205,11 +239,11 @@
 export default {
   props: {
     price: String,
-    option: String
   },
   data: () => ({
     processing: false,
     finished: false,
+    option: "",
   }),
   methods: {
     process() {
@@ -219,6 +253,9 @@ export default {
         this.finished = true;
       }, 2500);
     },
+  },
+  mounted() {
+    this.option = this.$store.state.option;
   },
 };
 </script>
@@ -232,7 +269,7 @@ export default {
 }
 
 .spinner > div {
-  background-color: #FFDB30;
+  background-color: #ffdb30;
   height: 100%;
   width: 3px;
   display: inline-block;

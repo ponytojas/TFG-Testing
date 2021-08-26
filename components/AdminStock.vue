@@ -48,7 +48,7 @@
       </div>
       <div class="flex flex-row justify-center items-center mt-4">
         <button
-          :class="[option === 'A' ? 'bg-blue-400 text-white hover:bg-blue-700' : 'text-blue-500']"
+          :class="[option === 'A' ? 'bg-blue-400 text-white hover:bg-blue-700' : 'text-blue-500 txt-sm']"
           class=" px-4 py-2 rounded-lg"
           @click="add()"
         >

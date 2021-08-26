@@ -7,6 +7,7 @@ import LockOpenOutline from "vue-material-design-icons/LockOpenOutline.vue";
 import CogOutline from "vue-material-design-icons/CogOutline.vue";
 import Delete from "vue-material-design-icons/Delete.vue";
 import Pencil from "vue-material-design-icons/Pencil.vue";
+import CreditCardMultipleOutline from "vue-material-design-icons/CreditCardMultipleOutline.vue";
 
 
 
@@ -18,4 +19,5 @@ export default function materialIcons() {
   Vue.component("CogOutline-icon", CogOutline);
   Vue.component("Delete-icon", Delete);
   Vue.component("Pencil-icon", Pencil);
+  Vue.component("CreditCardMultipleOutline-icon", CreditCardMultipleOutline);
 }
