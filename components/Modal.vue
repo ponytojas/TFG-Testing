@@ -22,7 +22,9 @@
     <p class="mt-4 text-red-500 text-center" :class="fail ? '': 'hidden'">
       The username or password is not correct
     </p>
-    <div class="flex-grow overflow-y-auto">
+    <div class="flex-grow overflow-y-auto" 
+      @keyup.enter="$emit('confirm', close)"
+    >
       <slot v-bind:params="params"></slot>
     </div>
     <div class="flex-shrink-0 flex justify-around items-center pt-4">
