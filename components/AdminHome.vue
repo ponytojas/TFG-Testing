@@ -6,20 +6,20 @@
       <div
         class="flex flex-row w-full h-full justify-center align-middle mb-10"
       >
-        <p class="text-6xl font-thin text-gray-800">
+        <p class="text-5xl font-thin text-gray-800">
           <CogOutline-icon class="text-yellow-400" />
-          Welcome to your Admin panel
+          Bienvenido al panel de Administración
           <CogOutline-icon class="text-green-300" />
         </p>
       </div>
       <div class="flex flex-row w-full h-full justify-center align-middle mb-4">
         <p class="text-4xl font-thin text-gray-800">
-          Here you can manage your users and stock
+          Aquí podrás gestionar los usuarios y el stock
         </p>
       </div>
       <div class="flex flex-row w-full h-full justify-center align-middle">
         <p class="text-2xl font-thin text-gray-800">
-          Open the side menu and start working
+          Abre el menú lateral y empieza a trabajar
         </p>
       </div>
       <div class="flex flex-row w-full h-full"></div>

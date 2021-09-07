@@ -5,98 +5,98 @@
       "name": "JUAN MIGUEL LUQUE FALCON",
       "username": "juanmiguel_70",
       "email": "vviuafe89@lycos.co.uk",
-      "role": "admin"
+      "role": "Administrador"
     },
     {
       "id": "40249489H",
       "name": "CLARA VALLE AMADOR",
       "username": "clara_01",
       "email": "xcfbd2ku0a@btinternet.com",
-      "role": "user"
+      "role": "Usuario"
     },
     {
       "id": "59736249M",
       "name": "LARA AGUILAR IZQUIERDO",
       "username": "lara_87",
       "email": "liygkogs3@teacher.com",
-      "role": "user"
+      "role": "Usuario"
     },
     {
       "id": "50993493D",
       "name": "RAMIRO OJEDA CAMARA",
       "username": "ramiro_97",
       "email": "xlqrm9sm@hotmail.com",
-      "role": "user"
+      "role": "Usuario"
     },
     {
       "id": "20800161L",
       "name": "MARIA GRACIA REQUENA ALBA",
       "username": "mariagracia_71",
       "email": "9k68gql3p@lycos.de",
-      "role": "admin"
+      "role": "Administrador"
     },
     {
       "id": "20786124N",
       "name": "JULIA NOGUERA DEL VALLE",
       "username": "julia_56",
       "email": "y1fbipu1o@gmail.com",
-      "role": "admin"
+      "role": "Administrador"
     },
     {
       "id": "51510352N",
       "name": "ARNAU ESTEVEZ MORCILLO",
       "username": "arnau_01",
       "email": "z2sh2vou0@msn.co.uk",
-      "role": "user"
+      "role": "Usuario"
     },
     {
       "id": "63884900P",
       "name": "MAGDALENA HERRERA GARZON",
       "username": "magdalena_98",
       "email": "xaex84i2h9@mail.com",
-      "role": "user"
+      "role": "Usuario"
     },
     {
       "id": "61934593D",
       "name": "EDGAR CARBONELL CHAVES",
       "username": "edgar_60",
       "email": "v397no1cxt@unforgettable.com",
-      "role": "user"
+      "role": "Usuario"
     },
     {
       "id": "18738915X",
       "name": "IGNACIO NAVARRO MENDEZ",
       "username": "ignacio_97",
       "email": "ufbraa0d@unforgettable.com",
-      "role": "admin"
+      "role": "Administrador"
     },
     {
       "id": "71955913E",
       "name": "ALBA CAMACHO SANZ",
       "username": "alba_61",
       "email": "05m27bxj@mail.com",
-      "role": "admin"
+      "role": "Administrador"
     },
     {
       "id": "27165708V",
       "name": "ESTHER CASTRO TORO",
       "username": "esther_56",
       "email": "imfdxmr3vo@writeme.com",
-      "role": "user"
+      "role": "Usuario"
     }
   ],
   "stocks": [
     {
       "id": "959800YTTQQAY29GG904",
-      "name": "eraser"
+      "name": "Borrador"
     },
     {
       "id": "959800GO3PZZZBYE8S54",
-      "name": "bell"
+      "name": "Campana"
     },
     {
       "id": "959800QRWSEESXON6H30",
-      "name": "needle"
+      "name": "Aguja"
     },
     {
       "id": "959800OIAEJA1XEGCG13",
@@ -104,23 +104,23 @@
     },
     {
       "id": "959800V1IB3SLH1UWU22",
-      "name": "dagger"
+      "name": "Palillo de dientes"
     },
     {
       "id": "9598007XX3YBR02E6C09",
-      "name": "carrot"
+      "name": "Zanahoria"
     },
     {
       "id": "959800N0VEVFNNQDUR10",
-      "name": "lemon"
+      "name": "Limón"
     },
     {
       "id": "959800GKKIYP151HO408",
-      "name": "bottle of glue"
+      "name": "Bote de pegamento"
     },
     {
       "id": "95980014G77AIC157G52",
-      "name": "jigsaw puzzle"
+      "name": "Rompecabeza"
     }
   ]
 }

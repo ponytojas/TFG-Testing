@@ -6,16 +6,16 @@
       <div
         class="flex flex-row w-full h-full justify-center align-middle mb-10"
       >
-        <p class="text-4xl font-thin text-gray-800">Manage Stock</p>
+        <p class="text-4xl font-thin text-gray-800">Administrar Stock</p>
       </div>
       <div>
         <table class="table-auto border-collaps w-full">
           <thead>
             <tr class="text-left">
               <th class="px-4 py-2 border border-green-600">ID</th>
-              <th class="px-4 py-2 border border-green-600">Name</th>
-              <th class="px-4 py-2 border border-green-600">Amount</th>
-              <th class="px-4 py-2 border border-green-600">Price</th>
+              <th class="px-4 py-2 border border-green-600">Nombre</th>
+              <th class="px-4 py-2 border border-green-600">Cantidad</th>
+              <th class="px-4 py-2 border border-green-600">Precio</th>
             </tr>
           </thead>
           <tbody v-for="(stock, index) in this.stocks" :key="stock.id">
@@ -27,7 +27,7 @@
                 {{ stock.name }}
               </td>
               <td class="px-4 py-2 border border-green-600">
-                {{ stock.amount }} {{ stock.amount === 1 ? "unit" : "units" }}
+                {{ stock.amount }} {{ stock.amount === 1 ? "unidad" : "unidades" }}
               </td>
               <td class="px-4 py-2 border border-green-600">
                 {{ stock.price }} €
@@ -67,7 +67,7 @@
         :fail="this.fail"
       >
         <template v-slot:title class="text-white">
-          {{ index === -1 ? "Adding a new item" : "Editing item" }}
+          {{ index === -1 ? "Añadir nuevo producto" : "Editar producto" }}
         </template>
         <div class="mb-4">
           <label
@@ -101,7 +101,7 @@
             class="block text-gray-700 font-light mt-5 text-sm mb-2"
             for="name"
           >
-            Name
+            Nombre
           </label>
           <input
             class="
@@ -128,7 +128,7 @@
             class="block text-gray-700 font-light mt-5 text-sm mb-2"
             for="amount"
           >
-            Amount
+            Cantidad
           </label>
           <input
             class="
@@ -155,7 +155,7 @@
             class="block text-gray-700 font-light mt-5 text-sm mb-2"
             for="price"
           >
-            Price
+            Precio
           </label>
           <input
             class="

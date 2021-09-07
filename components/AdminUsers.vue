@@ -1,22 +1,22 @@
 <template>
   <div class="flex flex-col w-full justify-center items-center">
     <div
-      class="flex flex-col w-8/12 h-full border rounded-xl shadow-lg px-10 py-6"
+      class="flex flex-col w-8/12 h-full border rounded-xl shadow-lg px-8 py-6"
     >
       <div
         class="flex flex-row w-full h-full justify-center align-middle mb-10"
       >
-        <p class="text-4xl font-thin text-gray-800">Manage Users</p>
+        <p class="text-4xl font-thin text-gray-800">Administrar usuarios</p>
       </div>
       <div>
         <table class="table-auto border-collaps w-full">
           <thead>
             <tr class="text-left">
               <th class="px-4 py-2 border border-green-600">ID</th>
-              <th class="px-4 py-2 border border-green-600">Name</th>
+              <th class="px-4 py-2 border border-green-600">Nombre</th>
               <th class="px-4 py-2 border border-green-600">Username</th>
               <th class="px-4 py-2 border border-green-600">Email</th>
-              <th class="px-4 py-2 border border-green-600">Role</th>
+              <th class="px-4 py-2 border border-green-600">Rol</th>
             </tr>
           </thead>
           <tbody v-for="(user, index) in this.users" :key="user.id">
@@ -60,7 +60,7 @@
           class="px-4 py-2 rounded-lg"
           @click="add()"
         >
-          Add new user
+          Añadir un usuario
         </button>
       </div>
       <Modal
@@ -72,7 +72,7 @@
         :index="this.index"
       >
         <template v-if="this.index" v-slot:title class="text-white">
-          {{ index === -1 ? "Adding a new user" : "Editing user" }}
+          {{ index === -1 ? "Añadiendo un nuevo usuario" : "Editando usuario" }}
         </template>
         <div class="mb-4">
           <label
@@ -106,7 +106,7 @@
             class="block text-gray-700 font-light mt-5 text-sm mb-2"
             for="name"
           >
-            Name
+            Nombre
           </label>
           <input
             class="
@@ -187,7 +187,7 @@
             class="block text-gray-700 font-light mt-5 text-sm mb-2"
             for="role"
           >
-            Role
+            Rol
           </label>
           <select
             class="
@@ -206,8 +206,8 @@
             id="role"
             v-model="userToEdit.role"
           >
-            <option value="admin">Admin</option>
-            <option value="user">User</option>
+            <option value="admin">Administrador</option>
+            <option value="user">Usuario</option>
           </select>
         </div>
       </Modal>
@@ -235,7 +235,7 @@ export default {
   },
   methods: {
     edit(index) {
-      this.index = index;
+      this.index = index + 1;
       this.userToEdit = { ...this.users[index] };
       this.show = true;
     },
@@ -255,7 +255,7 @@ export default {
     confirm() {
       this.index === -1
         ? this.users.push(this.userToEdit)
-        : (this.users[this.index] = { ...this.userToEdit });
+        : (this.users[this.index - 1] = { ...this.userToEdit });
       this.index = -1;
       this.show = false;
     },

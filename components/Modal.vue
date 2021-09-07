@@ -20,7 +20,7 @@
       <slot name="title"></slot>
     </span>
     <p class="mt-4 text-red-500 text-center" :class="fail ? '': 'hidden'">
-      The username or password is not correct
+      El nombre de usuario o la contraseña son incorrectos
     </p>
     <div class="flex-grow overflow-y-auto" 
       @keyup.enter="$emit('confirm', close)"
@@ -37,7 +37,7 @@
         class="cursor-pointer"
         @click="$emit('confirm', close)"
       >
-        Confirm
+        Confirmar
       </button>
       <button
         :class="[
@@ -48,7 +48,7 @@
         class="cursor-pointer"
         @click="$emit('cancel', close)"
       >
-        Cancel
+        Cancelar
       </button>
     </div>
   </vue-final-modal>

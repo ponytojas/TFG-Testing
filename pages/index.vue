@@ -24,13 +24,13 @@
     >
       <img class="h-12 w-12 my-auto ml-6" src="/images/logo.png" />
       <p class="text-xl text-gray-800 font-light cursor-pointer">
-        <a href="#home" v-smooth-scroll>Home</a>
+        <a href="#home" v-smooth-scroll>Inicio</a>
       </p>
       <p class="text-xl text-gray-800 font-light cursor-pointer">
-        <a href="#pricing" v-smooth-scroll>Pricing</a>
+        <a href="#pricing" v-smooth-scroll>Precio</a>
       </p>
       <p class="text-xl text-gray-800 font-light cursor-pointer">
-        <a href="#about" v-smooth-scroll>About</a>
+        <a href="#about" v-smooth-scroll>Sobre nosotros</a>
       </p>
 
       <button
@@ -47,11 +47,11 @@
           class="text-white"
         />
 
-        Login
+        Acceso de usuario
       </button>
     </div>
     <p class="text-white z-10 mt-40 mb-20 font-thin" style="font-size: 7rem">
-      Come to the future
+      Bienvenido al futuro
     </p>
     <div
       class="flex flex-col mt-20 mb-20 w-10/12 justify-center items-center z-10"
@@ -73,10 +73,10 @@
         <div class="flex flex-col py-10 w-1/3 px-10">
           <p class="text-5xl font-thin text-center mb-6">
             <RocketLaunchOutline-icon class="text-yellow-600" />
-            Fast
+            Veloz
           </p>
           <p class="text-center text-2xl font-thin">
-            Do what you usually do, but faster. Or so we hope.
+            Haz lo que haces habitualmente, pero más rápido. O eso esperamos.
           </p>
         </div>
         <div class="flex flex-col py-10 px-10 w-1/3">
@@ -85,7 +85,7 @@
             Flexible
           </p>
           <p class="text-center text-2xl font-thin">
-            More than you used to do, more than you need.
+            Más de lo que solías hacer, más de lo que necesita.
           </p>
         </div>
         <div class="flex flex-col py-10 px-10 w-1/3">
@@ -94,13 +94,13 @@
             Simple
           </p>
           <p class="text-center text-2xl font-thin">
-            Maybe so simple that you miss some function
+            Quizás tan simple que te falte alguna función
           </p>
         </div>
       </div>
     </div>
     <div class="w-full">
-      <p class="text-8xl text-center font-thin mt-32">Pricing</p>
+      <p class="text-8xl text-center font-thin mt-32">Precio</p>
     </div>
     <div
       class="
@@ -115,7 +115,7 @@
       id="pricing"
     >
       <div
-      :class="this.option == 'A' ? 'shadow-xl' : 'shadow'"
+        :class="this.option == 'A' ? 'shadow-xl' : 'shadow'"
         class="
           bg-white
           rounded-lg
@@ -161,7 +161,7 @@
                 mr-3
                 sm:mr-4
               "
-              ><span class="text-xl">$</span><span>249</span></span
+              ><span class="text-xl"></span><span>249</span>€</span
             ><span
               class="
                 inline-flex
@@ -174,50 +174,37 @@
                 mr-3
                 sm:mr-4
               "
-              ><span class="text-2xl md:text-3xl">$</span><span>149</span></span
-            ><span class="inline-flex justify-between flex-col mr-3 sm:mr-4"
-              ><span
-                class="
-                  inline-flex
-                  text-left
-                  font-display
-                  text-xl
-                  md:text-2xl
-                  font-bold
-                  text-grey-dark
-                "
-                >USD</span
-              ></span
+              ><span>149</span><span class="text-2xl md:text-3xl">€</span></span
             >
           </div>
           <div>
             <ul class="list-reset px-2 sm:px-6">
               <li class="flex items-start mb-4">
                 <span class="mr-4 mt-1"><Tick /></span
-                ><span>Your <strong>own</strong> cloud</span>
+                ><span>Tu <strong>propia</strong> nube</span>
               </li>
               <li class="flex items-start mb-4">
                 <span class="mr-4 mt-1"><Tick /></span
-                ><span><strong>Priority</strong> support</span>
+                ><span>Soporte <strong>prioritario</strong></span>
               </li>
               <li class="flex items-start mb-4">
                 <span class="mr-4 mt-1"><Tick /></span
-                ><span>Videotutorials with <strong>examples</strong></span>
+                ><span>Videotutoriales con <strong>ejemplos</strong></span>
               </li>
               <li class="flex items-start mb-4">
                 <span class="mr-4 mt-1"><Tick /></span
-                ><span><strong>Customize</strong> to make your style</span>
+                ><span><strong>Personaliza</strong> para crear tu propio estilo</span>
               </li>
             </ul>
             <div class="text-center mt-12">
               <nuxt-link
                 :to="{
                   name: 'checkout',
-                  params: { price: '$149 USD', option: this.option },
+                  params: { price: '149€', option: this.option },
                 }"
               >
                 <button
-                :class="[
+                  :class="[
                     this.option == 'A'
                       ? 'bg-green-300 hover:bg-green-500 text-white px-6 py-4 sm:py-5 w-full cursor-pointer'
                       : 'text-green-300 mx-auto cursor-text',
@@ -233,7 +220,9 @@
                     font-semibold
                   "
                 >
-                  {{ this.option == 'A' ? 'Buy 1 license now!' : 'This is for me' }}
+                  {{
+                    this.option == "A" ? "¡Comprar 1 licencia ahora!" : "Este es para mi"
+                  }}
                 </button>
               </nuxt-link>
             </div>
@@ -241,7 +230,7 @@
         </div>
       </div>
       <div
-      :class="this.option == 'A' ? 'shadow' : 'border mr-2'"
+        :class="this.option == 'A' ? 'shadow' : 'border mr-2'"
         class="
           bg-white
           rounded-lg
@@ -267,7 +256,7 @@
               my-0
             "
           >
-            The Essentials
+            Esencial
           </h3>
         </div>
         <div class="px-8 pb-8 text-base md:text-lg">
@@ -284,34 +273,21 @@
                 mr-2
                 sm:mr-3
               "
-              ><span class="text-xl md:text-2xl">$</span><span>99</span></span
-            ><span class="inline-flex justify-between flex-col"
-              ><span
-                class="
-                  inline-flex
-                  text-left
-                  font-display
-                  text-lg
-                  md:text-xl
-                  font-bold
-                  text-grey-dark
-                "
-                >USD</span
-              ></span
+              ><span>99</span><span class="text-xl md:text-2xl">€</span></span
             >
           </div>
           <div>
             <ul class="list-reset px-2 sm:px-6">
               <li class="flex items-start mb-4">
                 <span class="mr-4 mt-1"><Tick /></span
-                ><span><strong>Basic</strong> functions</span>
+                ><span>Funciones <strong>básicas</strong> </span>
               </li>
             </ul>
             <div class="text-center mt-12">
               <nuxt-link
                 :to="{
                   name: 'checkout',
-                  params: { price: '$99 USD', option: this.option },
+                  params: { price: '99€', option: this.option },
                 }"
               >
                 <button
@@ -330,7 +306,7 @@
                     font-semibold
                   "
                 >
-                  {{ this.option == 'A' ? 'Buy now!' : 'This is ok' }}
+                  {{ this.option == "A" ? "¡Comprar ahora!" : "Este es suficiente" }}
                 </button>
               </nuxt-link>
             </div>
@@ -340,7 +316,7 @@
     </div>
     <div id="about" class="w-6/12 mx-auto">
       <div class="w-full">
-        <p class="text-8xl text-center font-thin mt-32">About us</p>
+        <p class="text-8xl text-center font-thin mt-32">Sobre nosotros</p>
       </div>
       <Grid></Grid>
     </div>
@@ -351,13 +327,13 @@
       :option="this.option"
       :fail="this.fail"
     >
-      <template v-slot:title class="text-white">Login to your account</template>
+      <template v-slot:title class="text-white">Accede a tu cuenta</template>
       <div class="mb-4">
         <label
           class="block text-gray-700 font-light mt-5 text-sm mb-2"
           for="username"
         >
-          Username
+          Nombre de usuario
         </label>
         <input
           class="
@@ -375,7 +351,7 @@
           "
           id="username"
           type="text"
-          placeholder="Username"
+          placeholder="Nombre de usuario"
           v-model="user"
         />
       </div>
@@ -384,7 +360,7 @@
           class="block text-gray-700 font-light mt-5 text-sm mb-2"
           for="password"
         >
-          Password
+          Contraseña
         </label>
         <input
           class="

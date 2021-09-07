@@ -2,8 +2,8 @@
   <div>
     <template>
       <Push :closeOnNavigation="true">
-        <span class="cursor-pointer" @click="setSelection('home')">Home</span>
-        <span class="cursor-pointer" @click="setSelection('users')">Users</span>
+        <span class="cursor-pointer" @click="setSelection('home')">Inicio</span>
+        <span class="cursor-pointer" @click="setSelection('users')">Usuarios</span>
         <span class="cursor-pointer" @click="setSelection('stock')">Stock</span>
       </Push>
     </template>

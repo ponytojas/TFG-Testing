@@ -24,18 +24,18 @@
         v-if="!finished"
       >
         <span class="text-6xl font-light text-gray-800">
-          {{ $route.params.price || "100$" }}
+          {{ $route.params.price || "100€" }}
         </span>
         <div>
           <p class="px-32 text-center text-xl font-thin">
-            Enjoy your new suscription, we will automatically charge annually
-            this price. Even if the price varies, we will always let you know
-            and you can decide whether to keep the price or put another
+            Disfruta de tu nueva suscripción, automáticamente te cobraremos este
+            precio anualmente. Aunque el precio varíe, siempre te lo haremos
+            saber y podrás decidir si te quedas con el precio actual o el nuevo.
           </p>
         </div>
 
         <div class="px-32 text-center">
-          <p>Once the payment is processed you can enjoy the product</p>
+          <p>Una vez se haya procesado el pago podrás disfrutar del producto</p>
         </div>
       </div>
       <div
@@ -49,7 +49,7 @@
               class="text-gray-700 font-light mt-5 mb-2 ml-1"
               for="Name and surname"
             >
-              Name and surname
+              Nombre y apellido
             </label>
             <input
               class="
@@ -101,7 +101,7 @@
               class="text-gray-700 font-light mt-5 mb-2 ml-1"
               for="Password"
             >
-              Password
+              Contraseña
             </label>
             <input
               class="
@@ -128,7 +128,7 @@
               for="credit card"
             >
               <CreditCardMultipleOutline-icon></CreditCardMultipleOutline-icon>
-              Card number
+              Número de tarjeta
             </label>
             <input
               class="
@@ -185,7 +185,7 @@
                 ]"
                 class="px-4 py-2 rounded-3xl"
               >
-                Go back
+                Volver atrás
               </button>
             </NuxtLink>
 
@@ -198,7 +198,7 @@
               class="px-4 py-2 rounded-3xl"
               @click="process()"
             >
-              <span v-if="!processing">Process payment</span>
+              <span v-if="!processing">Processar el pago</span>
               <div class="spinner" v-if="processing">
                 <div class="rect1"></div>
                 <div class="rect2"></div>
@@ -216,18 +216,18 @@
       >
         <div class="flex flex-row justify-center items-center mb-10">
           <p class="text-center font-thin text-8xl text-gray-800">
-            🎉 Congrats!! 🎉
+            🎉 ¡¡ Enhorabuena !! 🎉
           </p>
         </div>
         <div class="flex flex-row justify-center items-center mb-10">
           <p class="text-2xl text-center">
-            Payment was successful. <br />
-            Now, you can go back to home screen and login into your account
+            El pago se procesó correctamente. <br />
+            Ahora puedes volver a la pantalla de inicio y acceder con tu cuenta.
           </p>
         </div>
         <nuxt-link to="/"
           ><button class="px-4 py-2 bg-blue-400 text-white rounded-3xl">
-            Go home and start using the app
+            Volver a inicio y empezar a usar la aplicación
           </button></nuxt-link
         >
       </div>
